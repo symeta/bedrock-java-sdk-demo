@@ -55,7 +55,7 @@ sudo ./aws/install
 aws configure
 #input IAM user's AK following the instruction guidance
 #input IAM user's SK following the instruction guidance
-#input region that has enabled Bedrock
+#input region id that has enabled Bedrock, e.g. us-west-2
 ```
 1.3 configure IAM user access Bedrock permission
 - add an inline policy for the IAM user to authenticate the user to use Bedrock
