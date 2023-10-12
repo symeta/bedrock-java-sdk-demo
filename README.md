@@ -1,7 +1,7 @@
 # bedrock-java-sdk-demo
 
-## pre-requisites
-1. configure pom.xml @dev host
+## 1. pre-requisites
+1.1 configure pom.xml @dev host
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
@@ -43,22 +43,22 @@
     
 </project>
 ```
-3. configure aws account credential @dev host
-   install aws cli @dev host
+1.2 configure aws account credential @dev host
+- install aws cli @dev host
 ```sh
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install
 ```
-  configure credentials
-  ```sh
-  aws configure
-  #input IAM user's AK following the instruction guidance
-  #input IAM user's SK following the instruction guidance
-  #input region that has enabled Bedrock
-  ```
-4. configure IAM user access Bedrock permission
-add an inline policy for the IAM user to authenticate the user to use Bedrock
+- configure credentials
+```sh
+aws configure
+#input IAM user's AK following the instruction guidance
+#input IAM user's SK following the instruction guidance
+#input region that has enabled Bedrock
+```
+1.3 configure IAM user access Bedrock permission
+- add an inline policy for the IAM user to authenticate the user to use Bedrock
 ```json
 {
 	"Version": "2012-10-17",
@@ -73,8 +73,8 @@ add an inline policy for the IAM user to authenticate the user to use Bedrock
 }
 ```
 
-## java project code
-1. main class
+## 2. java project code
+2.1 main class
 ```java
 package com.example;
 import org.slf4j.Logger;
@@ -102,7 +102,7 @@ public class app {
     
 }
 ```
-3. bedrockTest class
+2.2 bedrockTest class
 ```java
 package com.example;
 
@@ -160,6 +160,6 @@ public class bedrockTest {
 }
 ```
 
-## aws bedrock java sdk package definition
+## 3. aws bedrock java sdk package definition
 
 [bedrock java sdk package difinition](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/bedrock/package-summary.html)
